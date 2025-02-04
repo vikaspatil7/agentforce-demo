@@ -1,1 +1,24 @@
-Breadwinner demo page
+<html>
+  <body>
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DKB000000KtL4',
+				'Service_Agent_Embeded_Service_Deployment',
+				'https://orgfarm-ed47933690-dev-ed.develop.my.site.com/ESWServiceAgentEmbeded1738666241474',
+				{
+					scrt2URL: 'https://orgfarm-ed47933690-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-ed47933690-dev-ed.develop.my.site.com/ESWServiceAgentEmbeded1738666241474/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+  </body>
+</html>
